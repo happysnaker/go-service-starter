@@ -135,6 +135,7 @@ If this starter saves you time, consider:
 - starring the repo
 - sharing it with other backend engineers
 - supporting ongoing maintenance via the support page: [happysnaker.github.io/support](https://happysnaker.github.io/support/)
+- if you want lightweight async feedback on a public GitHub profile, repo README, or resume site, there is also a paid review option on the support page
 
 If this starter saved you setup time for a new service, small direct support is especially helpful.
 
