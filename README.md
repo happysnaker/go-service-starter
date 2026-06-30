@@ -1,72 +1,131 @@
 # go-service-starter
 
-A minimal but production-minded **Go HTTP service starter** for backend engineers.
+[![Go Version](https://img.shields.io/badge/go-1.22+-00ADD8?logo=go)](https://go.dev/)
+[![License](https://img.shields.io/github/license/happysnaker/go-service-starter)](./LICENSE)
+[![Stars](https://img.shields.io/github/stars/happysnaker/go-service-starter?style=social)](https://github.com/happysnaker/go-service-starter/stargazers)
 
-This repo is designed to be a clean starting point for small services and internal APIs that need better structure than a one-file demo, without immediately pulling in a large framework.
+A minimal but production-minded **Go HTTP service starter** for backend engineers who want a clean service baseline without adopting a heavyweight framework.
 
-## What it includes
+This repo is intentionally small enough to understand in one sitting, but structured enough to feel like the beginning of a real internal service.
 
-- standard-library-first HTTP server
+## Why this starter exists
+
+Many Go starter repos fall into one of two buckets:
+
+- they are too tiny to reuse outside a tutorial
+- they ship so much scaffolding that you are effectively adopting a framework
+
+`go-service-starter` aims for a middle ground:
+
+- **standard-library first**
+- **clear service boundaries**
+- **sane operational defaults**
+- **easy to extend for real backend work**
+
+## What you get
+
+- HTTP server based on `net/http`
 - environment-based configuration loading
 - structured JSON logging with `log/slog`
-- health and readiness endpoints
-- version endpoint with build metadata placeholders
-- graceful shutdown handling
-- simple project layout you can extend
+- `healthz`, `readyz`, and `version` endpoints
+- graceful shutdown on `SIGINT` / `SIGTERM`
+- build metadata placeholders for versioned delivery
+- lightweight layout for internal APIs and small services
 
-## Why this exists
+## Architecture at a glance
 
-A lot of Go starter repos are either:
+```mermaid
+flowchart LR
+    Env["Environment variables"] --> Config["internal/config"]
+    Config --> Main["cmd/api/main.go"]
+    Main --> Server["internal/httpserver"]
+    Build["internal/buildinfo"] --> Server
+    Server --> Routes["/, /healthz, /readyz, /version"]
+    Server --> Logs["structured request logs"]
+```
 
-- too tiny to be reused in a real service, or
-- so heavy that they feel like adopting a framework.
-
-This project tries to stay in the middle:
-
-- small enough to understand in one sitting
-- structured enough to use as a real internal-service base
-
-## Endpoints
-
-- `GET /` — basic service response
-- `GET /healthz` — liveness signal
-- `GET /readyz` — readiness signal
-- `GET /version` — build metadata placeholder
+See also: [`docs/architecture.md`](./docs/architecture.md)
 
 ## Project layout
 
 ```text
-cmd/api/                 service entrypoint
-internal/config/         config loading
-internal/httpserver/     HTTP server and middleware
-internal/buildinfo/      version / commit placeholders
-configs/                 example env config
-docs/                    architecture notes
+cmd/api/                    service entrypoint
+internal/config/            env config loading and defaults
+internal/httpserver/        routes, server wiring, request logging
+internal/buildinfo/         version / commit / builtAt placeholders
+configs/service.env.example example local env file
+docs/                       architecture and hardening notes
+Dockerfile                  minimal container build
+Makefile                    common local commands
 ```
+
+## Endpoints
+
+| Endpoint | Purpose |
+| --- | --- |
+| `GET /` | basic service response |
+| `GET /healthz` | liveness signal |
+| `GET /readyz` | readiness signal |
+| `GET /version` | build metadata placeholder |
 
 ## Quick start
 
-1. Copy `configs/service.env.example` into your own environment setup.
-2. Adjust values such as service name, address, and timeouts.
-3. Extend handlers, middleware, and internal modules for your own domain.
+```bash
+cp configs/service.env.example .env
+set -a && source .env && set +a
+go run ./cmd/api
+```
 
-## Good next steps
+Then hit the service:
 
-You can build on top of this starter by adding:
+```bash
+curl http://localhost:8080/
+curl http://localhost:8080/healthz
+curl http://localhost:8080/readyz
+curl http://localhost:8080/version
+```
 
-- request IDs
-- panic recovery middleware
-- metrics and tracing
-- persistence layer wiring
-- authentication / authorization
-- background workers
-- deployment manifests
+## Docker
 
-## Who this is for
+```bash
+docker build -t go-service-starter:dev .
+docker run --rm -p 8080:8080 --env-file configs/service.env.example go-service-starter:dev
+```
 
-- backend engineers starting a new internal service
-- Go learners graduating from toy demos to service structure
-- teams that want a lightweight starter instead of a full framework
+## When to use this
+
+This starter is a good fit when you want:
+
+- a clean baseline for a small backend service
+- a teaching repo for Go service structure
+- a lightweight internal API template
+- a foundation you can grow into metrics, tracing, auth, and persistence
+
+It is **not** trying to be:
+
+- a batteries-included platform framework
+- a complete microservice platform
+- an opinionated replacement for your whole internal stack
+
+## Production hardening roadmap
+
+Good next additions for a serious service:
+
+- request IDs and panic recovery middleware
+- metrics / tracing / pprof endpoints
+- configuration validation and startup checks
+- authn / authz middleware
+- persistence wiring and dependency boundaries
+- background workers and drain handling
+- CI, releases, and deployment manifests
+
+See [`docs/production-hardening.md`](./docs/production-hardening.md) for a more complete checklist.
+
+## Related repo
+
+If you like this repo, you may also want:
+
+- [`backend-engineer-checklist`](https://github.com/happysnaker/backend-engineer-checklist) — a practical roadmap for backend, systems, and distributed-systems fundamentals
 
 ## Support
 

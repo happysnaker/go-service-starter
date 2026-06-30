@@ -1,22 +1,63 @@
 # Architecture notes
 
-This starter intentionally keeps the first version small and dependency-light.
+This starter intentionally keeps the first version small, dependency-light, and easy to reason about.
 
-## Goals
+## Design goals
 
-- clear service entrypoint
-- env-based config loading
-- structured logging with the standard library
-- health and readiness endpoints
-- graceful shutdown
-- simple extension path for real services
+- clear entrypoint under `cmd/`
+- env-based configuration with sensible defaults
+- standard-library-first HTTP stack
+- structured operational logging
+- obvious health and version endpoints
+- graceful shutdown by default
+- easy extension path for real service concerns
 
-## Suggested next additions
+## Current flow
 
-- configuration validation
-- metrics and tracing
-- database wiring
-- request IDs and recovery middleware
-- auth middleware
-- domain modules under `internal/`
-- background job runners
+```mermaid
+flowchart TD
+    A["process starts"] --> B["config.Load()"]
+    B --> C["newLogger(cfg)"]
+    C --> D["httpserver.New(cfg, logger)"]
+    D --> E["route setup"]
+    E --> F["request logging middleware"]
+    F --> G["http.ListenAndServe()"]
+    G --> H["SIGINT / SIGTERM"]
+    H --> I["graceful shutdown with timeout"]
+```
+
+## Responsibilities by package
+
+### `cmd/api`
+
+- process lifecycle
+- signal handling
+- top-level wiring
+
+### `internal/config`
+
+- load env vars
+- parse duration values
+- map log level strings to `slog.Level`
+
+### `internal/httpserver`
+
+- route registration
+- server configuration
+- request logging middleware
+- JSON response helpers
+
+### `internal/buildinfo`
+
+- placeholder build metadata
+- values that can be injected at release/build time
+
+## Extension points
+
+Natural places to grow this starter:
+
+- middleware for request IDs, recovery, auth, and rate limiting
+- `internal/` domain modules for business logic
+- database and cache wiring behind clear boundaries
+- metrics, tracing, and debug endpoints
+- separate admin or internal-only listeners
