@@ -3,6 +3,7 @@
 [![Go Version](https://img.shields.io/badge/go-1.22+-00ADD8?logo=go)](https://go.dev/)
 [![License](https://img.shields.io/github/license/happysnaker/go-service-starter)](./LICENSE)
 [![Stars](https://img.shields.io/github/stars/happysnaker/go-service-starter?style=social)](https://github.com/happysnaker/go-service-starter/stargazers)
+[![Support](https://img.shields.io/badge/support-WeChat%20%26%20Alipay-7aa2ff)](https://happysnaker.github.io/support/)
 
 A minimal but production-minded **Go HTTP service starter** for backend engineers who want a clean service baseline without adopting a heavyweight framework.
 
@@ -125,6 +126,7 @@ See [`docs/production-hardening.md`](./docs/production-hardening.md) for a more 
 
 If you like this repo, you may also want:
 
+- [`go-http-middleware-kit`](https://github.com/happysnaker/go-http-middleware-kit) — reusable `net/http` middleware for request IDs, structured logs, panic recovery, and timeouts
 - [`backend-engineer-checklist`](https://github.com/happysnaker/backend-engineer-checklist) — a practical roadmap for backend, systems, and distributed-systems fundamentals
 - [`system-design-checklist`](https://github.com/happysnaker/system-design-checklist) — a practical framework for interviews, design reviews, and distributed-systems tradeoffs
 
