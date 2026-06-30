@@ -121,11 +121,12 @@ Good next additions for a serious service:
 
 See [`docs/production-hardening.md`](./docs/production-hardening.md) for a more complete checklist.
 
-## Related repo
+## Related repos
 
 If you like this repo, you may also want:
 
 - [`backend-engineer-checklist`](https://github.com/happysnaker/backend-engineer-checklist) — a practical roadmap for backend, systems, and distributed-systems fundamentals
+- [`system-design-checklist`](https://github.com/happysnaker/system-design-checklist) — a practical framework for interviews, design reviews, and distributed-systems tradeoffs
 
 ## Support
 
@@ -134,6 +135,8 @@ If this starter saves you time, consider:
 - starring the repo
 - sharing it with other backend engineers
 - supporting ongoing maintenance via the support page: [happysnaker.github.io/support](https://happysnaker.github.io/support/)
+
+If this starter saved you setup time for a new service, small direct support is especially helpful.
 
 ## License
 
