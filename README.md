@@ -133,7 +133,7 @@ If this starter saves you time, consider:
 
 - starring the repo
 - sharing it with other backend engineers
-- supporting my open-source work via my GitHub profile: [happysnaker](https://github.com/happysnaker#support-my-open-source-work)
+- supporting ongoing maintenance via the support page: [happysnaker.github.io/support](https://happysnaker.github.io/support/)
 
 ## License
 
