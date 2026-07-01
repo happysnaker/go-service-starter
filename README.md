@@ -141,6 +141,12 @@ If this starter saves you time, consider:
 
 If this starter saved you setup time for a new service, small direct support is especially helpful.
 
+Typical thank-you support amounts that fit this repo:
+
+- **¥9.9** — if the README / layout saved you a detour
+- **¥19.9** — if it helped you bootstrap a real internal service faster
+- **¥99** — if you want compact async feedback on your own public service repo / README
+
 ## License
 
 MIT
