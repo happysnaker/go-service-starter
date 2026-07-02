@@ -10,6 +10,8 @@ A minimal but production-minded **Go HTTP service starter** for backend engineer
 
 This repo is intentionally small enough to understand in one sitting, but structured enough to feel like the beginning of a real internal service.
 
+- Project page: [happysnaker.github.io/go-service-starter](https://happysnaker.github.io/go-service-starter/)
+
 ## Why this starter exists
 
 Many Go starter repos fall into one of two buckets:
