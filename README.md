@@ -3,7 +3,7 @@
 [![Go Version](https://img.shields.io/badge/go-1.22+-00ADD8?logo=go)](https://go.dev/)
 [![License](https://img.shields.io/github/license/happysnaker/go-service-starter)](./LICENSE)
 [![Stars](https://img.shields.io/github/stars/happysnaker/go-service-starter?style=social)](https://github.com/happysnaker/go-service-starter/stargazers)
-[![Support](https://img.shields.io/badge/support-WeChat%20%26%20Alipay-7aa2ff)](https://happysnaker.github.io/support/)
+[![Support](https://img.shields.io/badge/support-WeChat%20%26%20Alipay-7aa2ff)](https://happysnaker.github.io/support/#from-go-service-starter)
 [![Async Review](https://img.shields.io/badge/review-Quick%20read%20%2F%20async-9b87f5)](https://happysnaker.github.io/review/)
 
 A minimal but production-minded **Go HTTP service starter** for backend engineers who want a clean service baseline without adopting a heavyweight framework.
@@ -139,7 +139,7 @@ If this starter saves you time, consider:
 
 - starring the repo
 - sharing it with other backend engineers
-- supporting ongoing maintenance via the support page: [happysnaker.github.io/support](https://happysnaker.github.io/support/)
+- supporting ongoing maintenance via the support page: [happysnaker.github.io/support](https://happysnaker.github.io/support/#from-go-service-starter)
 - if you want lightweight async feedback on a public GitHub profile, repo README, or portfolio page, details are also available on the support page
 
 If this starter saved you setup time for a new service, small direct support is especially helpful.
