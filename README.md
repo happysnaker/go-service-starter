@@ -146,6 +146,8 @@ Typical thank-you support amounts that fit this repo:
 
 - **¥9.9** — if the README / layout saved you a detour
 - **¥19.9** — if it helped you bootstrap a real internal service faster
+- **best payment note** — `go-service-starter`
+- **fastest path** — tip directly if this starter saved you setup time; use **¥29.9** / **¥99** only if you want feedback back
 - **¥99** — if you want compact async feedback on your own public service repo / README
 
 ## License
