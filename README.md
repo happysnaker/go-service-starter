@@ -143,6 +143,7 @@ If this starter saves you time, consider:
 - starring the repo
 - sharing it with other backend engineers
 - supporting ongoing maintenance via the support page: [happysnaker.github.io/support](https://happysnaker.github.io/support/#from-go-service-starter)
+- current cross-project sponsor brief: [Sponsor one-pager](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
 - shortest support thread: [If go-service-starter helped, here is the shortest support path](https://github.com/happysnaker/go-service-starter/discussions/1)
 - if you want lightweight async feedback on a public GitHub profile, repo README, or portfolio page, details are also available on the support page
 
