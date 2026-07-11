@@ -13,6 +13,8 @@ A minimal but production-minded **Go HTTP service starter** for backend engineer
 This repo is intentionally small enough to understand in one sitting, but structured enough to feel like the beginning of a real internal service.
 
 - Project page: [happysnaker.github.io/go-service-starter](https://happysnaker.github.io/go-service-starter/)
+- Proof before payment: [support/#proof-before-payment](https://happysnaker.github.io/support/#proof-before-payment)
+- 10-second support router: [support/#sponsor-router](https://happysnaker.github.io/support/#sponsor-router)
 - Reuse: click **Use this template** on GitHub to generate your own service baseline faster
 
 ## Why this starter exists
@@ -144,6 +146,8 @@ If this starter saves you time, consider:
 - sharing it with other backend engineers
 - supporting ongoing maintenance via the support page: [happysnaker.github.io/support](https://happysnaker.github.io/support/#from-go-service-starter)
 - current cross-project sponsor brief: [Sponsor one-pager](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
+- sponsor / paid-support intake replies: [share-kit intake replies](https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md#sponsor--paid-support-intake-replies)
+- deploy-read sample before paying: [happysnaker.github.io/review/deploy-read-sample](https://happysnaker.github.io/review/deploy-read-sample/)
 - shortest support thread: [If go-service-starter helped, here is the shortest support path](https://github.com/happysnaker/go-service-starter/discussions/1)
 - if you want lightweight async feedback on a public GitHub profile, repo README, or portfolio page, details are also available on the support page
 
@@ -156,6 +160,7 @@ Typical thank-you support amounts that fit this repo:
 - **best payment note** — `go-service-starter`
 - **fastest path** — tip directly if this starter saved you setup time; use **¥29.9** / **¥99** only if you want feedback back
 - **¥99** — if you want compact async feedback on your own public service repo / README
+- public issue privacy guardrail: do not paste private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output in public issues; use the intake replies first.
 
 ## License
 
