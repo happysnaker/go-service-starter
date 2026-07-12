@@ -162,6 +162,7 @@ Typical thank-you support amounts that fit this repo:
 - **fastest path** — tip directly if this starter saved you setup time; use **¥29.9** / **¥99** only if you want feedback back
 - **¥99** — if you want compact async feedback on your own public service repo / README
 - sponsor prospect pipeline: route Go service starter / backend template customers through the prospect pipeline first so the ask maps to proof, CTA, support note, and guardrail before payment: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-prospect-pipeline.md
+- sponsor conversion scorecard: classify Hot / Warm / Nurture / No-send before asking for support or paid review: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-conversion-scorecard.md
 - public issue privacy guardrail: do not paste private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output in public issues; use the intake replies first.
 
 ## License
