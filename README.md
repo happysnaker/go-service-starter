@@ -15,6 +15,7 @@ This repo is intentionally small enough to understand in one sitting, but struct
 - Project page: [happysnaker.github.io/go-service-starter](https://happysnaker.github.io/go-service-starter/)
 - Proof before payment: [support/#proof-before-payment](https://happysnaker.github.io/support/#proof-before-payment)
 - 10-second support router: [support/#sponsor-router](https://happysnaker.github.io/support/#sponsor-router)
+- Sponsor prospect pipeline: [docs/sponsor-prospect-pipeline.md](https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-prospect-pipeline.md) — route Go service starter / backend template customers to the right proof, CTA, support note, and guardrail before paying or asking for review
 - Reuse: click **Use this template** on GitHub to generate your own service baseline faster
 
 ## Why this starter exists
@@ -160,6 +161,7 @@ Typical thank-you support amounts that fit this repo:
 - **best payment note** — `go-service-starter`
 - **fastest path** — tip directly if this starter saved you setup time; use **¥29.9** / **¥99** only if you want feedback back
 - **¥99** — if you want compact async feedback on your own public service repo / README
+- sponsor prospect pipeline: route Go service starter / backend template customers through the prospect pipeline first so the ask maps to proof, CTA, support note, and guardrail before payment: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-prospect-pipeline.md
 - public issue privacy guardrail: do not paste private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output in public issues; use the intake replies first.
 
 ## License
